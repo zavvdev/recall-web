@@ -11,7 +11,8 @@
     "knip": "knip",
     "lint": "prettier . --check && tsc --noEmit && pnpm exec biome check .",
     "lint:fix": "prettier . --write && pnpm exec biome lint --write && pnpm exec biome check --write",
-    "validate": "pnpm lint && pnpm knip"
+    "validate-deps": "npx depcruise src --include-only '^src'",
+    "validate": "pnpm lint && pnpm knip && pnpm validate-deps"
   },
   "private": true,
   "packageManager": "pnpm@10.30.1",
@@ -33,6 +34,7 @@
     "@angular/compiler-cli": "^21.2.0",
     "@biomejs/biome": "2.5.3",
     "@types/node": "^26.1.1",
+    "dependency-cruiser": "^18.1.0",
     "jsdom": "^28.0.0",
     "knip": "^6.26.0",
     "prettier": "^3.8.1",
