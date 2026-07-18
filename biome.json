@@ -6,7 +6,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "includes": ["**", "!**/*.html"]
   },
   "formatter": {
     "enabled": true,
@@ -35,13 +36,5 @@
     "parser": {
       "cssModules": true
     }
-  },
-  "overrides": [
-    {
-      "includes": ["*.html"],
-      "formatter": {
-        "enabled": false
-      }
-    }
-  ]
+  }
 }
